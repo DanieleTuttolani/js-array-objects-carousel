@@ -32,7 +32,7 @@ const games = [
   //variabile incrementale 
   let toShow = 0;
   console.log("lunghezza della lista: " + games.length)
-  target.innerHTML = `<img src="${games[toShow].image}" alt="">`;
+  target.innerHTML = `<img src="${games[toShow].image}" alt="${games[toShow].title}">`;
 
   next.addEventListener("click", function(){
       toShow++;

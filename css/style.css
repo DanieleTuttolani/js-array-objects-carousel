@@ -20,6 +20,7 @@ img{
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+    transition: 2s linear;
 }
 .bi{
     font-size: 3.5rem;
