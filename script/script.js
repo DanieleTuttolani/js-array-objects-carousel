@@ -31,15 +31,22 @@ const games = [
 
   //variabile incrementale 
   let toShow = 0;
-  target.innerHTML = `<img src="${games[0].image}" alt="">`;
+  console.log("lunghezza della lista: " + games.length)
+  target.innerHTML = `<img src="${games[toShow].image}" alt="">`;
 
   next.addEventListener("click", function(){
       toShow++;
-      target.innerHTML = `<img src="${games[toShow].image}" alt="">`;
+      if (toShow >= games.length){
+        toShow = 0;
+      }
+    target.innerHTML = `<img src="${games[toShow].image}" alt="">`;
     console.log(toShow)
   })
   prev.addEventListener("click", function(){
     toShow--;
+    if (toShow < 0){
+        toShow = games.length - 1;
+      }
     target.innerHTML = `<img src="${games[toShow].image}" alt="">`;
     console.log(toShow)
   })
